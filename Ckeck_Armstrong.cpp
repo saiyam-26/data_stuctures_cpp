@@ -17,7 +17,7 @@ int CountDigits(int num){
 
 int CheckArmstrong(int num){
     
-    int sum = 0;
+    double sum = 0;  // power function returns a double
     int temp = num;
     int lastdigit = 0;
     int digits = CountDigits(num);
