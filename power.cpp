@@ -1,20 +1,17 @@
 #include <iostream>
 using namespace std;
 
+long power(int base, int exp) {
+
+    if (exp < 0) return -1;
+    if (exp == 0) return 1;
+    return base * power(base, exp - 1);
+}
+
 int main() {
-    int base, exponent, ans = 1;
-
-    cout << "Enter the base: ";
-    cin >> base;
-
-    cout << "Enter the exponent: ";
-    cin >> exponent;
-
-    for (int i = 1; i <= exponent; i++) {
-        ans *= base;
-    }
-
-    cout << base << " raised to the power " << exponent << " = " << ans << endl;
-
+    int base, exp;
+    cout << "Enter base and exponent: ";
+    cin >> base >> exp;
+    cout << "Result: " << power(base, exp);
     return 0;
 }
